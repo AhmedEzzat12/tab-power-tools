@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "Tabs Power Tools",
+    "version": "1.0",
+    "description": "Power tools",
+    "permissions": [
+        "activeTab",
+        "<all_urls>",
+        "tabs"
+    ],
+    "background": {
+        "scripts": [
+            "background-script.js"
+        ]
+    },
+    "commands": {
+        "open-popup": {
+            "suggested_key": {
+                "default": "Command+Shift+Comma"
+            },
+            "description": "Open popup window"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*",
+                "file:///*"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
+}

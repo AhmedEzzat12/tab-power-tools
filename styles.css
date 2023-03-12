@@ -1,0 +1,85 @@
+body {
+    overflow-x: hidden;
+}
+
+:focus {
+    outline: none;
+}
+
+#my-popup2 {
+    background-color: white;
+    overflow-y: auto;
+    width: 600px;
+}
+
+.mui-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mui-list__item {
+    position: relative;
+    display: block;
+    padding: 4px 4px;
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.mui-list__item:hover {
+    background-color: #f5f5f5;
+}
+
+.mui-list__item:focus {
+    background-color: #c4c4c4;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+#autocomplete-list li {
+    cursor: pointer;
+}
+
+
+.mui-textfield {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    position: relative;
+    width: 98%;
+}
+
+.mui-textfield label {
+    font-size: 16px;
+    color: #757575;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 12px;
+    top: 18px;
+    transition: 0.2s ease all;
+}
+
+.mui-textfield input {
+    font-size: 16px;
+    padding: 16px 12px;
+    border: none;
+    width: 98%;
+    box-sizing: border-box;
+    background-color: transparent;
+    max-width: 98%;
+}
+
+.mui-textfield input:focus {
+    outline: none;
+    border-bottom: 1px solid #1e88e5;
+}
+
+.mui-textfield input:focus+label,
+.mui-textfield input:not(:placeholder-shown)+label {
+    top: -10px;
+    font-size: 12px;
+    color: #1e88e5;
+}
