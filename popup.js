@@ -107,6 +107,11 @@ document.addEventListener('keydown', (event) => {
             currentItemIndex--;
         } else if (key === 'ArrowDown' && currentItemIndex < allLiNodes.length - 1) {
             currentItemIndex++;
+        } else if (key === 'ArrowDown' && currentItemIndex == allLiNodes.length - 1) {
+            input.focus();
+            currentItemIndex = -1;
+        } else if (key === 'ArrowUp' && currentItemIndex == -1) {
+            currentItemIndex = allLiNodes.length - 1;
         }
 
         allLiNodes[currentItemIndex].focus();
